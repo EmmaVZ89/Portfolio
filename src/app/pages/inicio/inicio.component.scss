@@ -79,7 +79,9 @@ $border-color: rgb(198, 130, 207);
 }
 
 .git-tab {
-  padding: 1rem !important;
+  margin: 1rem !important;
+  border: 1px solid $border-color;
+  box-shadow: 2px 2px 2px #000;
 }
 
 .img-github-chart {
@@ -89,7 +91,6 @@ $border-color: rgb(198, 130, 207);
   margin-left: auto;
   margin-right: auto;
   object-fit: cover;
-  margin-bottom: 0.5rem;
 }
 
 .cont {
@@ -101,8 +102,6 @@ $border-color: rgb(198, 130, 207);
     box-shadow: 2px 2px 2px #000;
   }
 }
-
-//
 
 .animated-scroll-up {
   animation: viewFromAbove 2s;

@@ -18,9 +18,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, InicioComponent],
+  declarations: [AppComponent, InicioComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

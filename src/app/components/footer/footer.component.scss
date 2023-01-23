@@ -1,0 +1,16 @@
+$bg-color: rgb(0, 16, 31);
+$text-color-primary: rgb(96, 210, 238);
+$text-color-secondary: rgb(198, 130, 207);
+$border-color: rgb(198, 130, 207);
+
+.footer {
+  text-align: center;
+  color: $text-color-primary;
+  font-weight: lighter;
+  margin-top: 1rem;
+  border-top: 1px solid $border-color;
+  a {
+    text-decoration: none;
+    color: $text-color-secondary;
+  }
+}

@@ -1,13 +1,13 @@
-<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="example-toolbar">
+<div class="container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="toolbar">
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1 class="example-app-name">Emmanuel Zelarayán</h1>
+    <h1 class="app-name">Emmanuel Zelarayán</h1>
   </mat-toolbar>
 
   <mat-sidenav-container
-    class="example-sidenav-container"
+    class="sidenav-container"
     [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
   >
     <mat-sidenav
@@ -24,32 +24,27 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <mat-accordion>
-        <mat-expansion-panel [expanded]="isExpanded">
-          <mat-expansion-panel-header>
-            <mat-panel-title> Título del panel </mat-panel-title>
-            <mat-panel-description> Descripción corta </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>
-            Hola, mi nombre es Emmanuel y recientemente me recibí de Técnico
-            Universitario en Programación en UNT-FRA en 2022. He estado
-            desarrollando habilidades en el campo de la programación web durante
-            casi 3 años, especializándome en el frontend y el backend. Estoy
-            buscando mi primera oportunidad laboral para aplicar mis habilidades
-            y aprender más en un entorno de trabajo. Estoy emocionado de tener
-            la oportunidad de contribuir a un equipo y crecer profesionalmente.
-          </p>
-        </mat-expansion-panel>
-      </mat-accordion>
+      <div class="user-profile">
+        <img *ngIf="user" src="{{ user.avatar_url }}" alt="foto de perfil" />
+        <h2>Hola, soy <span>Emmanuel</span></h2>
+        <h2>Desarrollador Web</h2>
+        <p>
+          Hola, soy Emmanuel, un desarrollador web egresado en la carrera
+          Técnico Universitario en Programación en UTN-FRA 2022. Me apasiona el
+          desarrollo y siempre estoy buscando aprender nuevas herramientas y
+          técnicas para mejorar mis habilidades.
+        </p>
+      </div>
 
       <mat-tab-group
         [(selectedIndex)]="selectedTab"
+        class="git-tab"
         backgroundColor="primary"
         mat-stretch-tabs="false"
         mat-align-tabs="start"
       >
-        <mat-tab label="Lenguajes"
-          ><img
+        <mat-tab label="Lenguajes">
+          <img
             class="img-github-chart"
             src="https://github-readme-stats.vercel.app/api/top-langs?username=emmavz89&show_icons=true&locale=es&layout=compact&theme=nightowl&card_width=445&hide=css,html"
             alt="emmavz89"
@@ -68,11 +63,13 @@
         /></mat-tab>
       </mat-tab-group>
 
-      <img
-        class="img-github-chart"
-        src="https://github-readme-activity-graph.cyclic.app/graph?username=EmmaVZ89&theme=noctis-minimus&locale=es)"
-        alt="emmavz89"
-      />
+      <div class="cont">
+        <img
+          class="img-github-chart"
+          src="https://github-readme-activity-graph.cyclic.app/graph?username=EmmaVZ89&theme=noctis-minimus&locale=es)"
+          alt="emmavz89"
+        />
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

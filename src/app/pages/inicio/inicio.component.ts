@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
+
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -10,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 export class InicioComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
   fillerNav = Array.from({ length: 50 }, (_, i) => `Nav Item ${i + 1}`);
+
+  user:any;
 
   selectedTab = 0;
   panelOpenState = false;
@@ -28,7 +31,9 @@ export class InicioComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // this.http.get('https://api.github.com/users/EmmaVZ89').subscribe((user) => {
     //   console.log(user);
+    //   this.user = user;
     // });
+
     // this.http
     //   .get('https://api.github.com/users/EmmaVZ89/repos?per_page=100')
     //   .subscribe((repos) => {

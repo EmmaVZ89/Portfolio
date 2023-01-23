@@ -36,7 +36,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatNativeDateModule,
     MatGridListModule,
     MatTabsModule,
-    MatExpansionModule
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

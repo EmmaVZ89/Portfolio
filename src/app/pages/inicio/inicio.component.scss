@@ -38,6 +38,14 @@ $border-color: rgb(198, 130, 207);
 }
 
 // *************************************************
+.nav-list {
+  background: $bg-color;
+  border-top: 2px solid $border-color;
+  border-right: 2px solid $border-color;
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+  padding: 1rem;
+}
 
 .user-profile {
   img {
@@ -89,5 +97,25 @@ $border-color: rgb(198, 130, 207);
   padding-right: 1rem;
   img {
     height: 8rem;
+    border: 1px solid $border-color;
+    box-shadow: 2px 2px 2px #000;
+  }
+}
+
+//
+
+.animated-scroll-up {
+  animation: viewFromAbove 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes viewFromAbove {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

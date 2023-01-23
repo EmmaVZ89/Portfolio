@@ -1,4 +1,10 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+  AfterViewInit,
+} from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 
 import { HttpClient } from '@angular/common/http';
@@ -8,11 +14,10 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.scss'],
 })
-export class InicioComponent implements OnInit, OnDestroy {
+export class InicioComponent implements OnInit, OnDestroy, AfterViewInit {
   mobileQuery: MediaQueryList;
-  fillerNav = Array.from({ length: 50 }, (_, i) => `Nav Item ${i + 1}`);
 
-  user:any;
+  user: any;
 
   selectedTab = 0;
   panelOpenState = false;
@@ -41,12 +46,15 @@ export class InicioComponent implements OnInit, OnDestroy {
     //   });
 
     setInterval(() => {
-      if(this.selectedTab + 1 == 3){
+      if (this.selectedTab + 1 == 3) {
         this.selectedTab = 0;
       } else {
         this.selectedTab++;
       }
     }, 5000);
+  }
+
+  ngAfterViewInit(): void {
   }
 
   ngOnDestroy(): void {

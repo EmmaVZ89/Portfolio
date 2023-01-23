@@ -15,19 +15,24 @@
       [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches"
       fixedTopGap="56"
+      class="nav-list"
     >
       <mat-nav-list>
-        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{
-          nav
-        }}</a>
+        <p>1adsfksdjf hakjsdhf askljd kalusudfh</p>
+        <p>1</p>
+        <p>1</p>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <div class="user-profile">
-        <img *ngIf="user" src="{{ user.avatar_url }}" alt="foto de perfil" />
+      <div class="user-profile animated-scroll-up">
+        <!-- <img *ngIf="user" src="{{ user.avatar_url }}" alt="foto de perfil" /> -->
+        <img
+          src="https://avatars.githubusercontent.com/u/65980591?v=4"
+          alt="foto de perfil"
+        />
         <h2>Hola, soy <span>Emmanuel</span></h2>
-        <h2>Desarrollador Web</h2>
+        <h2><span>Desarrollador Web</span></h2>
         <p>
           Hola, soy Emmanuel, un desarrollador web egresado en la carrera
           Técnico Universitario en Programación en UTN-FRA 2022. Me apasiona el
@@ -38,7 +43,7 @@
 
       <mat-tab-group
         [(selectedIndex)]="selectedTab"
-        class="git-tab"
+        class="git-tab animated-scroll-up"
         backgroundColor="primary"
         mat-stretch-tabs="false"
         mat-align-tabs="start"
@@ -63,7 +68,7 @@
         /></mat-tab>
       </mat-tab-group>
 
-      <div class="cont">
+      <div class="cont animated-scroll-up">
         <img
           class="img-github-chart"
           src="https://github-readme-activity-graph.cyclic.app/graph?username=EmmaVZ89&theme=noctis-minimus&locale=es)"

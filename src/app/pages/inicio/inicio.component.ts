@@ -18,8 +18,10 @@ export class InicioComponent implements OnInit, OnDestroy, AfterViewInit {
   mobileQuery: MediaQueryList;
 
   user: any;
+  spinner: boolean = false;
 
   selectedTab = 0;
+  selectedTabCategory = 0;
   panelOpenState = false;
   isExpanded = false;
 
@@ -34,6 +36,10 @@ export class InicioComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.spinner = true;
+    setTimeout(() => {
+      this.spinner = false;
+    }, 1000);
     // this.http.get('https://api.github.com/users/EmmaVZ89').subscribe((user) => {
     //   console.log(user);
     //   this.user = user;
@@ -54,12 +60,15 @@ export class InicioComponent implements OnInit, OnDestroy, AfterViewInit {
     }, 5000);
   }
 
-  ngAfterViewInit(): void {
-  }
+  ngAfterViewInit(): void {}
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   private _mobileQueryListener: () => void;
+
+  changeCategory(n:number){
+    this.selectedTabCategory = n;
+  }
 }

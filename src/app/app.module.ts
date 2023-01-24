@@ -19,6 +19,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { FooterComponent } from './components/footer/footer.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [AppComponent, InicioComponent, FooterComponent],
@@ -38,6 +39,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatGridListModule,
     MatTabsModule,
     MatExpansionModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

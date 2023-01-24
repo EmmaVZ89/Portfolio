@@ -20,7 +20,6 @@ export class InicioComponent implements OnInit, OnDestroy, AfterViewInit {
   user: any;
   spinner: boolean = false;
 
-  selectedTab = 0;
   selectedTabCategory = 0;
   panelOpenState = false;
   isExpanded = false;
@@ -51,13 +50,7 @@ export class InicioComponent implements OnInit, OnDestroy, AfterViewInit {
     //     // console.log(repos);
     //   });
 
-    setInterval(() => {
-      if (this.selectedTab + 1 == 3) {
-        this.selectedTab = 0;
-      } else {
-        this.selectedTab++;
-      }
-    }, 5000);
+    
   }
 
   ngAfterViewInit(): void {}

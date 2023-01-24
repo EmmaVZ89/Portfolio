@@ -20,9 +20,10 @@ import { FormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { FooterComponent } from './components/footer/footer.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, InicioComponent, FooterComponent],
+  declarations: [AppComponent, InicioComponent, FooterComponent, AboutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

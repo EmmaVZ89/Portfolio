@@ -1,0 +1,112 @@
+$bg-color: rgb(0, 16, 31);
+$bg-color-img: rgba(96, 210, 238, 0.3);
+$text-color-primary: rgb(96, 210, 238);
+$text-color-secondary: rgb(198, 130, 207);
+$border-color: rgb(198, 130, 207);
+$btn-cv-color: rgb(166, 96, 175);
+
+.skills-container {
+  margin-bottom: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.skill-title {
+  text-align: center;
+  color: $text-color-secondary;
+  font-weight: bolder;
+  margin: 2rem 1rem 1rem 1rem;
+  padding: 1rem 0;
+  border-top: 2px solid $text-color-primary;
+  border-bottom: 2px solid $text-color-primary;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  div {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(94, 94, 94, 0.164);
+    padding: 0.3rem;
+    margin: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    filter: grayscale(100%);
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: 0.5rem;
+    }
+    span {
+      text-align: center;
+      color: $text-color-primary;
+      text-shadow: 1px 1px 1px #000;
+    }
+  }
+  div:hover {
+    background-color: $bg-color-img;
+    filter: grayscale(0%);
+    transition: 1s;
+  }
+}
+
+// ACORDEON
+
+.title {
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 0px;
+}
+
+div.acordeon {
+  width: 100%;
+  min-height: 50px;
+}
+
+div.title {
+  width: 100%;
+  height: 50px;
+  background-color: $bg-color;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 2px solid $text-color-primary;
+}
+
+p.title {
+  margin: 1rem;
+  color: $text-color-primary;
+}
+
+div.info {
+  width: 100%;
+  height: 0px;
+  background-color: $bg-color;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+}
+
+p.info {
+  margin: 20px;
+  text-align: center;
+  color: #000;
+}
+
+div.acordeon:hover p.title {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+}
+
+div.acordeon:hover div.title {
+  border-color: $text-color-secondary;
+  background-color: $text-color-secondary;
+}
+
+div.acordeon:hover div.info {
+  height: 220px;
+}

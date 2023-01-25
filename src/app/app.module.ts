@@ -21,9 +21,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { FooterComponent } from './components/footer/footer.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AboutComponent } from './components/about/about.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
-  declarations: [AppComponent, InicioComponent, FooterComponent, AboutComponent],
+  declarations: [AppComponent, InicioComponent, FooterComponent, AboutComponent, SkillsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

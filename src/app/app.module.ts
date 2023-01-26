@@ -22,9 +22,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
-  declarations: [AppComponent, InicioComponent, FooterComponent, AboutComponent, SkillsComponent],
+  declarations: [AppComponent, InicioComponent, FooterComponent, AboutComponent, SkillsComponent, PortfolioComponent, ContactComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

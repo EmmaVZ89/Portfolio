@@ -1,1 +1,46 @@
-<p>portfolio works!</p>
+<mat-spinner *ngIf="spinner" class="spinner"></mat-spinner>
+
+<h3 class="repos-title">Mis otros <span>{{ repoQuantity }}</span> repositorios</h3>
+
+<div class="cards-container">
+  <mat-card class="card animated-scroll-up" *ngFor="let repo of repositories">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+      <mat-card-title>{{ repo.name }}</mat-card-title>
+      <mat-card-subtitle>Lenguaje: {{ repo.language }}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      class="img-card"
+      src="../../../assets/about/img/github4.jpg"
+      alt="Repositorio github"
+    />
+    <mat-card-content>
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-description>Ver descripción</mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            {{ repo.description }}
+          </p>
+          <p class="topics">Etiquetas:</p>
+          <span class="topics" *ngFor="let topic of repo.topics"
+            >{{ topic }} |
+          </span>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+    <mat-card-actions>
+      <a class="a-link" href="{{ repo.clone_url }}" target="_blank">
+        <button class="repo-btn">
+          <img
+            src="../../../assets/about/img/github.png"
+            alt="{{ repo.name }}"
+          />
+          <span>REPOSITORIO</span>
+        </button>
+      </a>
+    </mat-card-actions>
+  </mat-card>
+</div>

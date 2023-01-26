@@ -8,9 +8,13 @@ $border-color: rgb(198, 130, 207);
   color: $text-color-primary;
   font-weight: lighter;
   margin-top: 1rem;
+  padding-bottom: 4rem;
   border-top: 1px solid $border-color;
   a {
     text-decoration: none;
     color: $text-color-secondary;
+  }
+  a:hover{
+    color: #fff;
   }
 }

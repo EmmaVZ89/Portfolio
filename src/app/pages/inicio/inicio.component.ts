@@ -20,7 +20,7 @@ export class InicioComponent implements OnInit, OnDestroy, AfterViewInit {
   user: any;
   spinner: boolean = false;
 
-  selectedTabCategory = 1;
+  selectedTabCategory = 0;
   panelOpenState = false;
   isExpanded = false;
 

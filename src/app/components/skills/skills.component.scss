@@ -110,3 +110,58 @@ div.acordeon:hover div.title {
 div.acordeon:hover div.info {
   height: 220px;
 }
+
+//******************************************************************************
+//******************************************************************************
+//******************************************************************************
+
+@media screen and (min-width: 600px) {
+  .skill-title {
+    text-align: center;
+    font-size: 1.6rem;
+    border: none;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+  div.acordeon {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+  }  
+  div.title {
+    width: 7rem;
+    height: 22rem;
+    font-size: 0.8rem;
+    background-color: $bg-color;
+    overflow: hidden;
+    border: none;
+    border: 2px solid $text-color-primary;
+    border-left: none;
+  }
+
+  p.info {
+    margin: 20px;
+  }
+
+  div.info {
+    border: 2px solid $border-color;
+    width: 0px;
+    height: 22rem;
+    opacity: 0;
+    -webkit-transition: width 0.5s, height 0.5s, opacity 1s;
+  }
+
+  div.acordeon:hover div.info {
+    width: 15rem;
+    height: 22rem;
+    opacity: 1;
+  }
+  
+}

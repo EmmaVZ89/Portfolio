@@ -47,18 +47,23 @@ $btn-cv-color: rgb(166, 96, 175);
   visibility: visible;
 }
 .container figure:hover > .cap h3 {
-  margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.container figure:hover > .cap p {
+  margin-bottom: 3rem;
 }
 .container figure .cap h3 {
-  color: $text-color-primary;
-  font-weight: 400;
+  color: $text-color-secondary;
+  text-shadow: 1px 1px #000;
+  font-weight: bolder;
   margin-bottom: 120px;
   transition: all 500ms ease-out;
   margin-top: 30px;
 }
 .container figure .cap p {
-  color: #fff;
+  color: $text-color-primary;
+  text-shadow: 1px 1px #000;
   font-size: 1rem;
   line-height: 1.5;
   width: 100%;
@@ -73,7 +78,7 @@ $btn-cv-color: rgb(166, 96, 175);
   display: flex;
   width: 100%;
   justify-content: space-around;
-  align-items: center;
+  // align-items: center;
   button {
     display: flex;
     justify-content: space-around;

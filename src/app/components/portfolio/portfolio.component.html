@@ -1,23 +1,103 @@
 <mat-spinner *ngIf="spinner" class="spinner"></mat-spinner>
 
-<div class="main-repos-container animated-scroll-up">
+<h3 class="section-title">Web</h3>
+<div class="animated-scroll-up">
   <swiper
     [slidesPerView]="1"
     [spaceBetween]="10"
     [navigation]="true"
     [pagination]="{ clickable: true }"
   >
-    <ng-template *ngFor="let repo of mainRepositories" swiperSlide>
+    <ng-template *ngFor="let repo of webRepositories" swiperSlide>
+      <app-main-card [data]="repo"></app-main-card>
+    </ng-template>
+  </swiper>
+</div>
+
+<h3 class="section-title">Móvil</h3>
+<div class="animated-scroll-up">
+  <swiper
+    [slidesPerView]="1"
+    [spaceBetween]="10"
+    [navigation]="true"
+    [pagination]="{ clickable: true }"
+  >
+    <ng-template *ngFor="let repo of mobileRepositories" swiperSlide>
+      <app-main-card [data]="repo"></app-main-card>
+    </ng-template>
+  </swiper>
+</div>
+
+<h3 class="section-title">Escritorio</h3>
+<div class="animated-scroll-up">
+  <swiper
+    [slidesPerView]="1"
+    [spaceBetween]="10"
+    [navigation]="true"
+    [pagination]="{ clickable: true }"
+  >
+    <ng-template *ngFor="let repo of desktopRespositories" swiperSlide>
       <app-main-card [data]="repo"></app-main-card>
     </ng-template>
   </swiper>
 </div>
 
 <h3 class="repos-title">
-  Mis otros <span>{{ repoQuantity }}</span> repositorios en <span>GitHub</span>
+  Mis <span>{{ repoQuantity }}</span> repositorios en <span>GitHub</span>
 </h3>
 
-<div class="cards-container">
+<div class="animated-scroll-up">
+  <swiper
+    [slidesPerView]="1"
+    [spaceBetween]="10"
+    [navigation]="true"
+  >
+    <ng-template *ngFor="let repo of repositories" swiperSlide>
+      <mat-card class="card animated-scroll-up">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>{{ repo.name }}</mat-card-title>
+          <mat-card-subtitle>Lenguaje: {{ repo.language }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          class="img-card"
+          src="../../../assets/about/img/github4.jpg"
+          alt="Repositorio github"
+        />
+        <mat-card-content>
+          <mat-accordion>
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-description>Ver descripción</mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>
+                {{ repo.description }}
+              </p>
+              <p class="topics">Etiquetas:</p>
+              <span class="topics" *ngFor="let topic of repo.topics"
+                >{{ topic }} |
+              </span>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-card-content>
+        <mat-card-actions>
+          <a class="a-link" href="{{ repo.clone_url }}" target="_blank">
+            <button class="repo-btn">
+              <img
+                src="../../../assets/about/img/github.png"
+                alt="{{ repo.name }}"
+              />
+              <span>REPOSITORIO</span>
+            </button>
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </ng-template>
+  </swiper>
+</div>
+
+<!-- <div class="cards-container">
   <mat-card class="card animated-scroll-up" *ngFor="let repo of repositories">
     <mat-card-header>
       <div mat-card-avatar class="header-image"></div>
@@ -58,4 +138,4 @@
       </a>
     </mat-card-actions>
   </mat-card>
-</div>
+</div> -->

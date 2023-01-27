@@ -2,7 +2,8 @@
   <figure>
     <img src="{{ data.imgPath }}" alt="" />
     <div class="cap">
-      <h3>Titulo Card</h3>
+      <h3>{{ data.title }}</h3>
+      <p>{{ data.description }}</p>
       <div class="btn-main-respos">
         <a
           *ngIf="data.webLink != ''"

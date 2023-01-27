@@ -1,6 +1,104 @@
 <mat-spinner *ngIf="spinner" class="spinner"></mat-spinner>
 
-<h3 class="repos-title">Mis otros <span>{{ repoQuantity }}</span> repositorios</h3>
+<div class="main-repos-container">
+  <!-- LILIAN-WEB  -->
+  <div class="container">
+    <figure>
+      <img src="../../../assets/portfolio/img/lilian-web.png" alt="" />
+      <div class="cap">
+        <h3>Titulo Card</h3>
+        <div class="btn-main-respos">
+          <a class="a-link" href="https://lilian.ar/" target="_blank">
+            <button>
+              <img src="../../../assets/about/img/link.png" />
+              Visitar
+            </button>
+          </a>
+          <a
+            class="a-link"
+            href="https://github.com/EmmaVZ89/Peluqueria-Lilian-Proyecto"
+            target="_blank"
+          >
+            <button>
+              <img src="../../../assets/about/img/github.png" />
+              Repositorio
+            </button>
+          </a>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+  <!-- LILIAN-GESTOR  -->
+  <div class="container">
+    <figure>
+      <img src="../../../assets/portfolio/img/lilian-gestor.png" alt="" />
+      <div class="cap">
+        <h3>Titulo Card</h3>
+        <div class="btn-main-respos">
+          <a
+            class="a-link"
+            href="https://lilian-clientes.onrender.com/"
+            target="_blank"
+          >
+            <button>
+              <img src="../../../assets/about/img/link.png" />
+              Visitar
+            </button>
+          </a>
+          <a
+            class="a-link"
+            href="https://github.com/EmmaVZ89/Peluqueria-Lilian-Gestor"
+            target="_blank"
+          >
+            <button>
+              <img src="../../../assets/about/img/github.png" />
+              Repositorio
+            </button>
+          </a>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+  <!-- RICK AND MORTY  -->
+  <div class="container">
+    <figure>
+      <img src="../../../assets/portfolio/img/ram.png" alt="" />
+      <div class="cap">
+        <h3>Titulo Card</h3>
+        <div class="btn-main-respos">
+          <a
+            class="a-link"
+            href="https://rickandmortycardgame.000webhostapp.com/index.php"
+            target="_blank"
+          >
+            <button>
+              <img src="../../../assets/about/img/link.png" />
+              Visitar
+            </button>
+          </a>
+          <a
+            class="a-link"
+            href="https://github.com/EmmaVZ89/Rick-and-Morty-Card-Game"
+            target="_blank"
+          >
+            <button>
+              <img src="../../../assets/about/img/github.png" />
+              Repositorio
+            </button>
+          </a>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+
+</div>
+
+<h3 class="repos-title">
+  Mis otros <span>{{ repoQuantity }}</span> repositorios en <span>GitHub</span>
+</h3>
 
 <div class="cards-container">
   <mat-card class="card animated-scroll-up" *ngFor="let repo of repositories">

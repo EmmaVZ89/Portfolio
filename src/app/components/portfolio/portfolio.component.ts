@@ -1,23 +1,75 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+// import Swiper core and required modules
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class PortfolioComponent implements OnInit, AfterViewInit {
-
   repositories: any[] = [];
+  mainRepositories: any[] = [
+    {
+      imgPath: '../../../assets/portfolio/img/lilian-web.png',
+      webLink: 'https://lilian.ar/',
+      repoLink: 'https://github.com/EmmaVZ89/Peluqueria-Lilian-Proyecto',
+    },
+    {
+      imgPath: '../../../assets/portfolio/img/lilian-gestor.png',
+      webLink: 'https://lilian-clientes.onrender.com/',
+      repoLink: 'https://github.com/EmmaVZ89/Peluqueria-Lilian-Gestor',
+    },
+    {
+      imgPath: '../../../assets/portfolio/img/sj.png',
+      webLink: 'https://fir-userauth-fe03f.web.app/',
+      repoLink: 'https://github.com/EmmaVZ89/Sala-de-Juegos-TP-Laboratorio-IV',
+    },
+    {
+      imgPath: '../../../assets/portfolio/img/co.png',
+      webLink: 'https://clinica-online-tp2-labo-iv.firebaseapp.com/',
+      repoLink: 'https://github.com/EmmaVZ89/Clinica-Online-TP2-Laboratorio-IV',
+    },
+    {
+      imgPath: '../../../assets/portfolio/img/ram.png',
+      webLink: 'https://rickandmortycardgame.000webhostapp.com/index.php',
+      repoLink: 'https://github.com/EmmaVZ89/Rick-and-Morty-Card-Game',
+    },
+    {
+      imgPath: '../../../assets/portfolio/img/etg.png',
+      webLink: 'http://easytogit.com/',
+      repoLink: 'https://github.com/EmmaVZ89/easy-to-git',
+    },
+    {
+      imgPath: '../../../assets/portfolio/img/td.png',
+      webLink: 'https://emmavz89.github.io/Technical-Documentation/',
+      repoLink: 'https://github.com/EmmaVZ89/Technical-Documentation',
+    },
+    {
+      imgPath: '../../../assets/portfolio/img/lp.png',
+      webLink: 'https://emmavz89.github.io/Landing-Page/',
+      repoLink: 'https://github.com/EmmaVZ89/Landing-Page',
+    },
+    {
+      imgPath: '../../../assets/portfolio/img/pos.png',
+      webLink: '',
+      repoLink: 'https://github.com/EmmaVZ89/Punto-de-Venta-.NET',
+    },
+  ];
   spinner: boolean = false;
-  repoQuantity:number = 0;
+  repoQuantity: number = 0;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    const date = new Date('2021-05-19T14:53:10Z');
-    console.log(date);
     this.spinner = true;
+    this.spinner = false;
     // this.http
     //   .get('https://api.github.com/users/EmmaVZ89/repos?per_page=100')
     //   .subscribe((repos: any) => {
@@ -27,7 +79,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
     //     });
     //     this.repoQuantity = this.repositories.length;
     //     // console.log(this.repositories);
-    //   }); 
+    //   });
     // this.http
     //   .get(
     //     'https://api.github.com/repos/EmmaVZ89/Administracion-de-Usuarios-PPS/languages'
@@ -38,8 +90,9 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.spinner = false;
+    // this.spinner = false;
   }
+
 
   // INFO REPOS
   /*

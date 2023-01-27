@@ -1,0 +1,27 @@
+<div class="container">
+  <figure>
+    <img src="{{ data.imgPath }}" alt="" />
+    <div class="cap">
+      <h3>Titulo Card</h3>
+      <div class="btn-main-respos">
+        <a
+          *ngIf="data.webLink != ''"
+          class="a-link"
+          href="{{ data.webLink }}"
+          target="_blank"
+        >
+          <button>
+            <img src="../../../assets/about/img/link.png" />
+            Visitar
+          </button>
+        </a>
+        <a class="a-link" href="{{ data.repoLink }}" target="_blank">
+          <button>
+            <img src="../../../assets/about/img/github.png" />
+            Repositorio
+          </button>
+        </a>
+      </div>
+    </div>
+  </figure>
+</div>

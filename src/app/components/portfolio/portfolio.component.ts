@@ -178,13 +178,6 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
     //     this.repoQuantity = this.repositories.length;
     //     // console.log(this.repositories);
     //   });
-    // this.http
-    //   .get(
-    //     'https://api.github.com/repos/EmmaVZ89/Administracion-de-Usuarios-PPS/languages'
-    //   )
-    //   .subscribe((lang) => {
-    //     console.log(lang);
-    //   });
   }
 
   ngAfterViewInit(): void {

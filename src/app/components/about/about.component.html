@@ -1,78 +1,80 @@
-<div class="user-profile animated-scroll-up">
-  <div class="cont-img">
-    <div class="img">
-      <img
-        src="https://avatars.githubusercontent.com/u/65980591?v=4"
-        alt="foto de perfil"
-      />
+<div class="about-container">
+  <div class="user-profile animated-scroll-up">
+    <div class="cont-img">
+      <div class="img">
+        <img
+          src="https://avatars.githubusercontent.com/u/65980591?v=4"
+          alt="foto de perfil"
+        />
+      </div>
+      <div>
+        <h2>Emmanuel Zelarayán</h2>
+        <h2><span style="font-weight: bolder">Desarrollador Web</span></h2>
+      </div>
     </div>
-    <div>
-      <h2>Emmanuel Zelarayán</h2>
-      <h2><span style="font-weight: bolder">Desarrollador Web</span></h2>
+    <div class="cont-text">
+      <p class="qs-title">¿Quién soy?</p>
+      <p>
+        Hola, soy Emmanuel, un desarrollador web egresado en la carrera Técnico
+        Universitario en Programación en UTN-FRA 2022. Me apasiona el desarrollo
+        y siempre estoy buscando aprender nuevas herramientas y técnicas para
+        mejorar mis habilidades.
+      </p>
+      <button mat-raised-button color="primary">Descargar CV</button>
     </div>
   </div>
-  <div class="cont-text">
-    <p class="qs-title">¿Quién soy?</p>
-    <p>
-      Hola, soy Emmanuel, un desarrollador web egresado en la carrera Técnico
-      Universitario en Programación en UTN-FRA 2022. Me apasiona el desarrollo y
-      siempre estoy buscando aprender nuevas herramientas y técnicas para
-      mejorar mis habilidades.
-    </p>
-    <button mat-raised-button color="primary">Descargar CV</button>
+
+  <app-skills></app-skills>
+
+  <div class="git-container">
+    <mat-tab-group
+      [(selectedIndex)]="selectedTab"
+      class="git-tab animated-scroll-up"
+      backgroundColor="primary"
+      mat-stretch-tabs="false"
+      mat-align-tabs="start"
+    >
+      <mat-tab label="Lenguajes">
+        <div class="img-github-chart">
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs?username=emmavz89&show_icons=true&locale=es&layout=compact&theme=nightowl&card_width=445&hide=css,html"
+            alt="emmavz89"
+          />
+        </div>
+      </mat-tab>
+      <mat-tab label="Contribuciones">
+        <div class="img-github-chart">
+          <img
+            src="https://github-readme-streak-stats.herokuapp.com/?user=emmavz89&&theme=nightowl&locale=es"
+            alt="emmavz89"
+          />
+        </div>
+      </mat-tab>
+      <mat-tab label="Estadísticas">
+        <div class="img-github-chart">
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=emmavz89&show_icons=true&locale=en&theme=nightowl&hide=css"
+            alt="emmavz89"
+          />
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+    <mat-tab-group
+      [(selectedIndex)]="selectedTab"
+      class="git-tab animated-scroll-up"
+      backgroundColor="primary"
+      mat-stretch-tabs="false"
+      mat-align-tabs="start"
+    >
+      <mat-tab label="Graph Contribuciones">
+        <div class="img-github-chart">
+          <img
+            src="https://github-readme-activity-graph.cyclic.app/graph?username=EmmaVZ89&theme=noctis-minimus&locale=es)"
+            alt="emmavz89"
+          />
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </div>
-</div>
-
-<app-skills></app-skills>
-
-<div class="git-container">
-  <mat-tab-group
-    [(selectedIndex)]="selectedTab"
-    class="git-tab animated-scroll-up"
-    backgroundColor="primary"
-    mat-stretch-tabs="false"
-    mat-align-tabs="start"
-  >
-    <mat-tab label="Lenguajes">
-      <div class="img-github-chart">
-        <img
-          src="https://github-readme-stats.vercel.app/api/top-langs?username=emmavz89&show_icons=true&locale=es&layout=compact&theme=nightowl&card_width=445&hide=css,html"
-          alt="emmavz89"
-        />
-      </div>
-    </mat-tab>
-    <mat-tab label="Contribuciones">
-      <div class="img-github-chart">
-        <img
-          src="https://github-readme-streak-stats.herokuapp.com/?user=emmavz89&&theme=nightowl&locale=es"
-          alt="emmavz89"
-        />
-      </div>
-    </mat-tab>
-    <mat-tab label="Estadísticas">
-      <div class="img-github-chart">
-        <img
-          src="https://github-readme-stats.vercel.app/api?username=emmavz89&show_icons=true&locale=en&theme=nightowl&hide=css"
-          alt="emmavz89"
-        />
-      </div>
-    </mat-tab>
-  </mat-tab-group>
-
-  <mat-tab-group
-    [(selectedIndex)]="selectedTab"
-    class="git-tab animated-scroll-up"
-    backgroundColor="primary"
-    mat-stretch-tabs="false"
-    mat-align-tabs="start"
-  >
-    <mat-tab label="Graph Contribuciones">
-      <div class="img-github-chart">
-        <img
-          src="https://github-readme-activity-graph.cyclic.app/graph?username=EmmaVZ89&theme=noctis-minimus&locale=es)"
-          alt="emmavz89"
-        />
-      </div>
-    </mat-tab>
-  </mat-tab-group>
 </div>

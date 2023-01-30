@@ -67,6 +67,7 @@ $btn-cv-color: rgb(166, 96, 175);
 div.acordeon {
   width: 100%;
   min-height: 50px;
+  background: transparent !important;
 }
 
 div.title {
@@ -76,6 +77,8 @@ div.title {
   text-align: center;
   overflow: hidden;
   border-bottom: 2px solid $text-color-primary;
+  background: transparent !important;
+
 }
 
 p.title {
@@ -89,6 +92,7 @@ div.info {
   background-color: $bg-color;
   overflow: hidden;
   -webkit-transition: height 0.5s;
+  background: transparent !important;
 }
 
 p.info {

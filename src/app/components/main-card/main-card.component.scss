@@ -23,7 +23,7 @@ $btn-cv-color: rgb(166, 96, 175);
   overflow: hidden;
   border-radius: 5px;
   // border: 2px solid $border-color;
-  box-shadow: 0px 1px 10px $text-color-secondary;
+  // box-shadow: 0px 1px 10px $text-color-secondary;
 }
 .container figure img {
   width: 100%;
@@ -41,6 +41,10 @@ $btn-cv-color: rgb(166, 96, 175);
   opacity: 0;
   visibility: hidden;
   text-align: center;
+}
+.container figure:hover {
+  border: 1px solid $border-color;
+  transition: border 0.5s;
 }
 .container figure:hover > .cap {
   opacity: 1;
@@ -105,4 +109,10 @@ $btn-cv-color: rgb(166, 96, 175);
 
 .a-link {
   text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  .container figure {
+    height: 24rem;
+  }
 }

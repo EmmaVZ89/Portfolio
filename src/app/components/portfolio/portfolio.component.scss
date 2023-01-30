@@ -16,6 +16,23 @@ $btn-cv-color: rgb(166, 96, 175);
   z-index: 10;
 }
 
+.portfolio-container {
+  background-image: linear-gradient(rgba(0, 16, 31, 0.75), rgba(0, 16, 31, 0.9)),
+  url("../../../assets/portfolio/img/desktop.png");
+  box-shadow: inset 0px 0px 10px $bg-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.web-cont,
+.movil-cont,
+.desktop-cont,
+.git-cont {
+  width: 100%;
+}
+
 .section-title {
   color: $text-color-secondary;
   font-size: 1.5rem;
@@ -68,7 +85,7 @@ $btn-cv-color: rgb(166, 96, 175);
 
 .card {
   max-width: 90%;
-  background: $bg-color !important;
+  background: transparent !important;
   border: 2px solid $border-color;
   border-radius: 10px;
   display: block;
@@ -124,11 +141,11 @@ $btn-cv-color: rgb(166, 96, 175);
     margin-bottom: 1rem;
   }
   mat-accordion {
-    background: $bg-color !important;
+    background: transparent !important;
   }
   mat-expansion-panel {
     color: $text-color-primary !important;
-    background: $bg-color !important;
+    background: transparent !important;
     mat-panel-title {
       color: $text-color-primary !important;
     }
@@ -190,5 +207,32 @@ $btn-cv-color: rgb(166, 96, 175);
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .web,
+    .movil,
+    .desktop {
+      width: 60%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .github {
+      width: 80%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      .img-card {
+        width: 30%;
+      }
+    }
   }
 }

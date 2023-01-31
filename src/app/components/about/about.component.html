@@ -2,10 +2,7 @@
   <div class="user-profile animated-scroll-up">
     <div class="cont-img">
       <div class="img">
-        <img
-          src="https://avatars.githubusercontent.com/u/65980591?v=4"
-          alt="foto de perfil"
-        />
+        <img *ngIf="user" src="{{ user.avatar_url }}" alt="foto de perfil" />
       </div>
       <div>
         <h2>Emmanuel Zelarayán</h2>
@@ -18,7 +15,7 @@
       <p class="qs-title">{{ "titleAbout" | translate }}</p>
       <p>{{ "descriptionAbout" | translate }}</p>
       <a (click)="downloadCV()">
-        <button mat-raised-button color="primary" >
+        <button mat-raised-button color="primary">
           {{ "download" | translate }}
         </button>
       </a>

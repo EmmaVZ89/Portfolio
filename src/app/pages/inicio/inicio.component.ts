@@ -8,7 +8,6 @@ import {
   ElementRef,
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { HttpClient } from '@angular/common/http';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -21,7 +20,6 @@ export class InicioComponent implements OnInit, OnDestroy, AfterViewInit {
   checkLeng!: ElementRef;
   mobileQuery: MediaQueryList;
 
-  user: any;
   spinner: boolean = false;
 
   selectedTabCategory = 0;
@@ -31,7 +29,6 @@ export class InicioComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    private http: HttpClient,
     private translate: TranslateService
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
@@ -49,16 +46,6 @@ export class InicioComponent implements OnInit, OnDestroy, AfterViewInit {
     setTimeout(() => {
       this.spinner = false;
     }, 1000);
-    // this.http.get('https://api.github.com/users/EmmaVZ89').subscribe((user) => {
-    //   console.log(user);
-    //   this.user = user;
-    // });
-
-    // this.http
-    //   .get('https://api.github.com/users/EmmaVZ89/repos?per_page=100')
-    //   .subscribe((repos) => {
-    //     // console.log(repos);
-    //   });
   }
 
   ngAfterViewInit(): void {}

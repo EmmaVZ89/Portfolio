@@ -14,11 +14,6 @@ $btn-cv-color: rgb(166, 96, 175);
 }
 
 .user-profile {
-  // background-image: linear-gradient(rgba(0, 16, 31, 0.75), rgba(0, 16, 31, 0.9)),
-  //   url("../../../assets/about/img/teclado.jpg");
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
   box-shadow: inset 0px 0px 10px $bg-color;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -166,15 +161,6 @@ $btn-cv-color: rgb(166, 96, 175);
     width: 0;
   }
   .user-profile {
-    // background-image: linear-gradient(
-    //     rgba(0, 16, 31, 0.75),
-    //     rgba(0, 16, 31, 0.9)
-    //   ),
-    //   url("../../../assets/about/img/teclado.jpg");
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // box-shadow: inset 0px 0px 10px $bg-color;
     padding-top: 2rem;
     padding-bottom: 2rem;
 
@@ -186,11 +172,9 @@ $btn-cv-color: rgb(166, 96, 175);
       width: 15rem;
       height: 15rem;
       border: none;
-      box-shadow: inset 0px 0px 10px #f00;
       img {
         width: 100%;
         height: 15rem;
-        box-shadow: inset 0px 0px 10px #f00;
       }
     }
     .cont-img,

@@ -1,8 +1,6 @@
 import {
-  AfterViewInit,
   Component,
   OnInit,
-  ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -19,7 +17,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
   styleUrls: ['./portfolio.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class PortfolioComponent implements OnInit, AfterViewInit {
+export class PortfolioComponent implements OnInit {
   repositories: any[] = [];
   webRepositories: any[] = [
     {
@@ -167,21 +165,19 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.spinner = true;
-    this.spinner = false;
-    // this.http
-    //   .get('https://api.github.com/users/EmmaVZ89/repos?per_page=100')
-    //   .subscribe((repos: any) => {
-    //     this.repositories = repos;
-    //     this.repositories.sort(function (a: any, b: any) {
-    //       return <any>new Date(b.pushed_at) - <any>new Date(a.pushed_at);
-    //     });
-    //     this.repoQuantity = this.repositories.length;
-    //     // console.log(this.repositories);
-    //   });
+    this.http
+      .get('https://api.github.com/users/EmmaVZ89/repos?per_page=100')
+      .subscribe((repos: any) => {
+        this.repositories = repos;
+        this.repositories.sort(function (a: any, b: any) {
+          return <any>new Date(b.pushed_at) - <any>new Date(a.pushed_at);
+        });
+        this.repoQuantity = this.repositories.length;
+        this.spinner = false;
+      });
   }
 
   ngAfterViewInit(): void {
-    // this.spinner = false;
   }
 
   // INFO REPOS

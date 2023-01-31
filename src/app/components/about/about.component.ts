@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-about',
@@ -7,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   selectedTab = 0;
+  user: any = null;
+
+  constructor(private translate: TranslateService, private http: HttpClient) {}
 
   ngOnInit(): void {
     setInterval(() => {
@@ -16,14 +21,22 @@ export class AboutComponent implements OnInit {
         this.selectedTab++;
       }
     }, 5000);
+    this.http.get('https://api.github.com/users/EmmaVZ89').subscribe((user) => {
+      this.user = user;
+    });
   }
 
   downloadCV() {
-    const url = '../../../assets/Emmanuel Zelarayan CV.pdf';
+    let url = '../../../assets/cv_es.pdf';
+    let name = 'Emmanuel-Zelarayan-CV-Programador-FullStack.pdf';
+    if (this.translate.currentLang == 'en') {
+      url = '../../../assets/cv_en.pdf';
+      name = 'Emmanuel-Zelarayan-CV-FullStack-Developer.pdf';
+    }
     const link = document.createElement('a');
     link.href = url;
     link.target = '_blank';
-    link.download = 'Emmanuel-Zelarayan-CV-Programador-FullStack.pdf';
+    link.download = name;
     link.click();
   }
 }

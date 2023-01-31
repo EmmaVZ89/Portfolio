@@ -16,15 +16,21 @@ $btn-cv-color: rgb(166, 96, 175);
   z-index: 10;
 }
 
+.description {
+  color: $text-color-primary;
+  text-align: justify;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
 .portfolio-container {
   background-image: linear-gradient(rgba(0, 16, 31, 0.75), rgba(0, 16, 31, 0.9)),
-  url("../../../assets/portfolio/img/desktop.png");
+    url("../../../assets/portfolio/img/desktop.png");
   box-shadow: inset 0px 0px 10px $bg-color;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
 
 .web-cont,
 .movil-cont,
@@ -34,7 +40,7 @@ $btn-cv-color: rgb(166, 96, 175);
 }
 
 .section-title {
-  color: $text-color-secondary;
+  color: $text-color-primary;
   font-size: 1.5rem;
   text-align: center;
   font-weight: bolder;
@@ -43,8 +49,8 @@ $btn-cv-color: rgb(166, 96, 175);
   margin: 1rem 3rem 0.5rem 3rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-top: 2px solid $text-color-primary;
-  border-bottom: 2px solid $text-color-primary;
+  border-top: 2px solid $text-color-secondary;
+  border-bottom: 2px solid $text-color-secondary;
 }
 
 .swiper {
@@ -216,6 +222,15 @@ $btn-cv-color: rgb(166, 96, 175);
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(
+        rgba(0, 16, 31, 0.75),
+        rgba(0, 16, 31, 0.9)
+      ),
+      url("../../../assets/portfolio/img/desktop.png");
+    box-shadow: inset 0px 0px 10px $bg-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     .web,
     .movil,

@@ -5,28 +5,37 @@
     <button class="mobile" mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1 class="app-name mobile">Emmanuel Zelarayán</h1>
     <div class="nav-bar">
       <ul>
         <li
           [ngClass]="selectedTabCategory == 0 ? 'li-focus' : ''"
           (click)="changeCategory(0)"
         >
-          Sobre mi
+          {{ "about" | translate }}
         </li>
         <li
           [ngClass]="selectedTabCategory == 1 ? 'li-focus' : ''"
           (click)="changeCategory(1)"
         >
-          Portafolio
+          {{ "portfolio" | translate }}
         </li>
         <li
           [ngClass]="selectedTabCategory == 2 ? 'li-focus' : ''"
           (click)="changeCategory(2)"
         >
-          Contacto
+          {{ "contact" | translate }}
         </li>
       </ul>
+    </div>
+    <div class="switch-cont">
+      <h2 class="app-name mobile">
+        <span class="title-span">{{ " \< " }}</span
+        >Emma<span class="title-span">{{ " />" }}</span>
+      </h2>
+      <label class="switch">
+        <input type="checkbox" (change)="switchLang()" #checkLeng />
+        <span class="slider"></span>
+      </label>
     </div>
   </mat-toolbar>
 
@@ -45,19 +54,19 @@
           [ngClass]="selectedTabCategory == 0 ? 'link-focus' : ''"
           (click)="changeCategory(0)"
         >
-          Sobre mi
+          {{ "about" | translate }}
         </p>
         <p
           [ngClass]="selectedTabCategory == 1 ? 'link-focus' : ''"
           (click)="changeCategory(1)"
         >
-          Portafolio
+          {{ "portfolio" | translate }}
         </p>
         <p
           [ngClass]="selectedTabCategory == 2 ? 'link-focus' : ''"
           (click)="changeCategory(2)"
         >
-          Contacto
+          {{ "contact" | translate }}
         </p>
       </mat-nav-list>
     </mat-sidenav>
@@ -67,15 +76,15 @@
         [(selectedIndex)]="selectedTabCategory"
         headerPosition="below"
       >
-        <mat-tab label="Sobre mi">
+        <mat-tab label="{{ 'about' | translate }}">
           <app-about></app-about>
         </mat-tab>
 
-        <mat-tab label="Portafolio">
+        <mat-tab label="{{ 'portfolio' | translate }}">
           <app-portfolio></app-portfolio>
         </mat-tab>
 
-        <mat-tab label="Contacto">
+        <mat-tab label="{{ 'contact' | translate }}">
           <app-contact></app-contact>
         </mat-tab>
       </mat-tab-group>

@@ -1,6 +1,12 @@
 <mat-spinner *ngIf="spinner" class="spinner"></mat-spinner>
 
-<div class="portfolio-container">
+<div class="portfolio-container animated-scroll-up">
+  <div class="description animated-scroll-up">
+    <p>
+      {{ "portfolioDescription" | translate }}
+    </p>
+  </div>
+
   <div class="web-cont">
     <div class="web">
       <h3 class="section-title">Web</h3>
@@ -21,7 +27,7 @@
 
   <div class="movil-cont">
     <div class="movil">
-      <h3 class="section-title">Móvil</h3>
+      <h3 class="section-title">{{ "mobile" | translate }}</h3>
       <div class="animated-scroll-up">
         <swiper
           [slidesPerView]="1"
@@ -39,7 +45,7 @@
 
   <div class="desktop-cont">
     <div class="desktop">
-      <h3 class="section-title">Escritorio</h3>
+      <h3 class="section-title">{{ "desktop" | translate }}</h3>
       <div class="animated-scroll-up">
         <swiper
           [slidesPerView]="1"
@@ -58,7 +64,8 @@
   <div class="git-cont">
     <div class="github">
       <h3 class="repos-title">
-        Mis <span>{{ repoQuantity }}</span> repositorios en <span>GitHub</span>
+        {{ "my" | translate }} <span>{{ repoQuantity }}</span>
+        {{ "repositories" | translate }} <span>GitHub</span>
       </h3>
       <div class="animated-scroll-up">
         <swiper [slidesPerView]="1" [spaceBetween]="10" [navigation]="true">
@@ -68,7 +75,8 @@
                 <div mat-card-avatar class="header-image"></div>
                 <mat-card-title>{{ repo.name }}</mat-card-title>
                 <mat-card-subtitle
-                  >Lenguaje: {{ repo.language }}</mat-card-subtitle
+                  >{{ "language" | translate }}:
+                  {{ repo.language }}</mat-card-subtitle
                 >
               </mat-card-header>
               <img
@@ -81,14 +89,14 @@
                 <mat-accordion>
                   <mat-expansion-panel hideToggle>
                     <mat-expansion-panel-header>
-                      <mat-panel-description
-                        >Ver descripción</mat-panel-description
-                      >
+                      <mat-panel-description>{{
+                        "seeDescription" | translate
+                      }}</mat-panel-description>
                     </mat-expansion-panel-header>
                     <p>
                       {{ repo.description }}
                     </p>
-                    <p class="topics">Etiquetas:</p>
+                    <p class="topics">{{ "tags" | translate }}:</p>
                     <span class="topics" *ngFor="let topic of repo.topics"
                       >{{ topic }} |
                     </span>
@@ -102,7 +110,7 @@
                       src="../../../assets/about/img/github.png"
                       alt="{{ repo.name }}"
                     />
-                    <span>REPOSITORIO</span>
+                    <span>{{ "repo" | translate }}</span>
                   </button>
                 </a>
               </mat-card-actions>

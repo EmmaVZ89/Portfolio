@@ -1,0 +1,83 @@
+$bg-color: rgb(0, 16, 31);
+$text-color-primary: rgb(96, 210, 238);
+$text-color-secondary: rgb(198, 130, 207);
+$border-color: rgb(198, 130, 207);
+$btn-cv-color: rgb(166, 96, 175);
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 90vh;
+  background-image: linear-gradient(rgba(0, 16, 31, 0.75), rgba(0, 16, 31, 0.9)),
+    url("../../../assets/contact/contacto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px $bg-color;
+}
+
+.gral-container {
+  border: 2px solid $border-color;
+  border-radius: 5px;
+  margin: 0rem 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 4px #000;
+}
+
+.description {
+  color: $text-color-primary;
+  text-align: justify;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.imgs-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-cont {
+  width: 30%;
+  img {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 100%;
+    filter: grayscale(100%);
+  }
+  img:hover {
+    cursor: pointer;
+    filter: grayscale(0%);
+    transition: filter 500ms;
+  }
+}
+
+.animated-scroll-up {
+  animation: viewFromAbove 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes viewFromAbove {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .gral-container {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}

@@ -9,18 +9,19 @@
       </div>
       <div>
         <h2>Emmanuel Zelarayán</h2>
-        <h2><span style="font-weight: bolder">Desarrollador Web</span></h2>
+        <h2>
+          <span style="font-weight: bolder">{{ "developer" | translate }}</span>
+        </h2>
       </div>
     </div>
     <div class="cont-text">
-      <p class="qs-title">¿Quién soy?</p>
-      <p>
-        Hola, soy Emmanuel, un desarrollador web egresado en la carrera Técnico
-        Universitario en Programación en UTN-FRA 2022. Me apasiona el desarrollo
-        y siempre estoy buscando aprender nuevas herramientas y técnicas para
-        mejorar mis habilidades.
-      </p>
-      <button mat-raised-button color="primary">Descargar CV</button>
+      <p class="qs-title">{{ "titleAbout" | translate }}</p>
+      <p>{{ "descriptionAbout" | translate }}</p>
+      <a (click)="downloadCV()">
+        <button mat-raised-button color="primary" >
+          {{ "download" | translate }}
+        </button>
+      </a>
     </div>
   </div>
 
@@ -34,7 +35,7 @@
       mat-stretch-tabs="false"
       mat-align-tabs="start"
     >
-      <mat-tab label="Lenguajes">
+      <mat-tab label="{{ 'languages' | translate }}">
         <div class="img-github-chart">
           <img
             src="https://github-readme-stats.vercel.app/api/top-langs?username=emmavz89&show_icons=true&locale=es&layout=compact&theme=nightowl&card_width=445&hide=css,html"
@@ -42,7 +43,7 @@
           />
         </div>
       </mat-tab>
-      <mat-tab label="Contribuciones">
+      <mat-tab label="{{ 'contributions' | translate }}">
         <div class="img-github-chart">
           <img
             src="https://github-readme-streak-stats.herokuapp.com/?user=emmavz89&&theme=nightowl&locale=es"
@@ -50,7 +51,7 @@
           />
         </div>
       </mat-tab>
-      <mat-tab label="Estadísticas">
+      <mat-tab label="{{ 'statistics' | translate }}">
         <div class="img-github-chart">
           <img
             src="https://github-readme-stats.vercel.app/api?username=emmavz89&show_icons=true&locale=en&theme=nightowl&hide=css"
@@ -67,7 +68,7 @@
       mat-stretch-tabs="false"
       mat-align-tabs="start"
     >
-      <mat-tab label="Graph Contribuciones">
+      <mat-tab label="{{ 'graph' | translate }}">
         <div class="img-github-chart">
           <img
             src="https://github-readme-activity-graph.cyclic.app/graph?username=EmmaVZ89&theme=noctis-minimus&locale=es)"

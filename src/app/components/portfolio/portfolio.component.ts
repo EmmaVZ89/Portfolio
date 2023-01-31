@@ -154,7 +154,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   desktopRespositories: any[] = [
     {
       title: 'Punto de Venta',
-      description: 'NET Framework | C# | WPF',
+      description: 'NET Framework | C# | WPF | Sql Server',
       imgPath: '../../../assets/portfolio/img/pos.png',
       webLink: '',
       repoLink: 'https://github.com/EmmaVZ89/Punto-de-Venta-.NET',

@@ -17,4 +17,13 @@ export class AboutComponent implements OnInit {
       }
     }, 5000);
   }
+
+  downloadCV() {
+    const url = '../../../assets/Emmanuel Zelarayan CV.pdf';
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.download = 'Emmanuel-Zelarayan-CV-Programador-FullStack.pdf';
+    link.click();
+  }
 }

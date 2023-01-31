@@ -1,12 +1,12 @@
 <div class="skills-container">
-  <h3 class="skill-title">Habilidades y Herramientas</h3>
+  <h3 class="skill-title">{{ "skillTitle" | translate }}</h3>
 
   <div class="container">
     <!-- VD -->
     <div>
       <div class="acordeon">
         <div class="title">
-          <p class="title">
+          <p *ngIf="translate.currentLang == 'es'" class="title">
             <span>V</span>
             <span>i</span>
             <span>s</span>
@@ -30,6 +30,26 @@
             <span>o</span>
             <span>s</span>
           </p>
+          <p *ngIf="translate.currentLang == 'en'" class="title">
+            <span>D</span>
+            <span>a</span>
+            <span>t</span>
+            <span>a</span>
+            <span>&nbsp;</span>
+            <span>V</span>
+            <span>i</span>
+            <span>s</span>
+            <span>u</span>
+            <span>a</span>
+            <span>l</span>
+            <span>i</span>
+            <span>z</span>
+            <span>a</span>
+            <span>t</span>
+            <span>i</span>
+            <span>o</span>
+            <span>n</span>
+          </p>
         </div>
         <div class="info">
           <div class="img-container">
@@ -49,7 +69,7 @@
     <div>
       <div class="acordeon">
         <div class="title">
-          <p class="title">
+          <p *ngIf="translate.currentLang == 'es'" class="title">
             <span>M</span>
             <span>a</span>
             <span>q</span>
@@ -68,6 +88,25 @@
             <span>i</span>
             <span>l</span>
             <span>o</span>
+            <span>s</span>
+          </p>
+          <p *ngIf="translate.currentLang == 'en'" class="title">
+            <span>L</span>
+            <span>a</span>
+            <span>y</span>
+            <span>o</span>
+            <span>u</span>
+            <span>t</span>
+            <span>&nbsp;</span>
+            <span>a</span>
+            <span>n</span>
+            <span>d</span>
+            <span>&nbsp;</span>
+            <span>S</span>
+            <span>t</span>
+            <span>y</span>
+            <span>l</span>
+            <span>e</span>
             <span>s</span>
           </p>
         </div>
@@ -117,7 +156,7 @@
     <div>
       <div class="acordeon">
         <div class="title">
-          <p class="title">
+          <p *ngIf="translate.currentLang == 'es'" class="title">
             <span>S</span>
             <span>e</span>
             <span>r</span>
@@ -130,6 +169,25 @@
             <span>s</span>
             <span>&nbsp;</span>
             <span>y</span>
+            <span>&nbsp;</span>
+            <span>A</span>
+            <span>P</span>
+            <span>I</span>
+            <span>'</span>
+            <span>s</span>
+          </p>
+          <p *ngIf="translate.currentLang == 'en'" class="title">
+            <span>S</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>e</span>
+            <span>r</span>
+            <span>s</span>
+            <span>&nbsp;</span>
+            <span>a</span>
+            <span>n</span>
+            <span>d</span>
             <span>&nbsp;</span>
             <span>A</span>
             <span>P</span>
@@ -163,7 +221,7 @@
     <div>
       <div class="acordeon">
         <div class="title">
-          <p class="title">
+          <p *ngIf="translate.currentLang == 'es'" class="title">
             <span>B</span>
             <span>a</span>
             <span>s</span>
@@ -174,6 +232,17 @@
             <span>e</span>
             <span>&nbsp;</span>
             <span>B</span>
+            <span>a</span>
+            <span>s</span>
+            <span>e</span>
+            <span>s</span>
+          </p>
+          <p *ngIf="translate.currentLang == 'en'" class="title">
+            <span>D</span>
+            <span>a</span>
+            <span>t</span>
+            <span>a</span>
+            <span>b</span>
             <span>a</span>
             <span>s</span>
             <span>e</span>
@@ -219,7 +288,19 @@
     <div>
       <div class="acordeon">
         <div class="title">
-          <p class="title">
+          <p *ngIf="translate.currentLang == 'es'" class="title">
+            <span>F</span>
+            <span>r</span>
+            <span>a</span>
+            <span>m</span>
+            <span>e</span>
+            <span>w</span>
+            <span>o</span>
+            <span>r</span>
+            <span>k</span>
+            <span>s</span>
+          </p>
+          <p *ngIf="translate.currentLang == 'en'" class="title">
             <span>F</span>
             <span>r</span>
             <span>a</span>
@@ -264,7 +345,7 @@
     <div>
       <div class="acordeon">
         <div class="title">
-          <p class="title">
+          <p *ngIf="translate.currentLang == 'es'" class="title">
             <span>L</span>
             <span>e</span>
             <span>n</span>
@@ -272,6 +353,17 @@
             <span>u</span>
             <span>a</span>
             <span>j</span>
+            <span>e</span>
+            <span>s</span>
+          </p>
+          <p *ngIf="translate.currentLang == 'en'" class="title">
+            <span>L</span>
+            <span>a</span>
+            <span>n</span>
+            <span>g</span>
+            <span>u</span>
+            <span>a</span>
+            <span>g</span>
             <span>e</span>
             <span>s</span>
           </p>
@@ -316,11 +408,19 @@
     <div>
       <div class="acordeon">
         <div class="title">
-          <p class="title">
+          <p *ngIf="translate.currentLang == 'es'" class="title">
             <span>O</span>
             <span>t</span>
             <span>r</span>
             <span>o</span>
+            <span>s</span>
+          </p>
+          <p *ngIf="translate.currentLang == 'en'" class="title">
+            <span>O</span>
+            <span>t</span>
+            <span>h</span>
+            <span>e</span>
+            <span>r</span>
             <span>s</span>
           </p>
         </div>
